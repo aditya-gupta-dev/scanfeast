@@ -1,5 +1,5 @@
-import { BarcodeScanningResult, Camera, CameraView, useCameraPermissions } from 'expo-camera';
-import { Link, useRouter } from 'expo-router';
+import { BarcodeScanningResult, CameraView, useCameraPermissions } from 'expo-camera';
+import { useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { MaterialIcons } from '@expo/vector-icons'
 import { Text, View, TouchableOpacity, StyleSheet } from "react-native";
@@ -21,7 +21,7 @@ export default function Scan() {
   }
 
   const goBack = () => {
-    router.back()
+    router.push('/')
   }
 
   useEffect(() => {
