@@ -5,11 +5,9 @@ import { useRouter } from 'expo-router';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useCameraPermissions }from 'expo-camera';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useColorScheme } from 'nativewind';
 
 export default function IntroScreen() {
   const router = useRouter();
-  const { colorScheme } = useColorScheme();
   const [permission, requestPermission] = useCameraPermissions()
   const [loading, setLoading] = useState(false);
 
